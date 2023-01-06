@@ -15,6 +15,8 @@ let player2Dice = document.querySelector(".img2");
 
 
 // Selecting the Header/Game Conclusion Message
+let headerMessage = document.querySelector("h1");
+
 
 
 
@@ -26,13 +28,14 @@ player2Dice.setAttribute("src", ImagesArray[randomIndexDice2]);
 
 
 if (randomIndexDice1 > randomIndexDice2) {
-    console.log("Player 1 wins");
+    headerMessage.textContent = "Player 1 wins";
+  
 }
 
 else if (randomIndexDice2 > randomIndexDice1) {
-    console.log("Player 2 wins");
+    headerMessage.textContent = "Player 2 wins";
 }
 
 else {
-    console.log("It's a Tie!");
+    headerMessage.textContent = "It's a Tie!";
 }
